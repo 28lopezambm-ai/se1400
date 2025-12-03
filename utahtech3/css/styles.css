@@ -73,8 +73,8 @@ main {
     background-position: center;
     height: 300px;
 }
-#studentshero {
-    background-image: url(../utahtechimages/studentshero.jpg);
+#studenthero {
+    background-image: url(../utahtechimages/studenthero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
