@@ -1,85 +1,23 @@
-body
-    background-color:  #FFFFFF;
-    color: #666666;
-    font-family: Arial, sans-serif;
-    color: #666666;
-    background-attachment: fixed;
-    background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
+* {
+    box-sizing: border-box;
 }
-header {
-    background-color: #003058;
-    color: #FFFFFF;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-header h1 {
-    line-height: 140%;
-    padding: .5rem;
-    padding-left: 1rem;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-origin: content-box;
-    margin-bottom: 0;
-}
-nav {
-    background-color: #f3f3f3;
-    font-weight: bold;
-    padding: .5rem;
-    padding-left: 1rem;
-    font-style: bold;
-}
-h2 {  
-     color: #424242;
-    font-family: 'Times New Roman', Times, serif;
-}
-dt {
-    font-weight: bold;
-    color:#BA1C21;
-}
-.ut {
-    color: #BA1C21;
-    font-weight: bold;
-}
-footer {
-    font-size: .70rem;
-    font-style: italic;
+body {
+    margin: 0px;
 }
 #wrapper {
-    background-color: #FFFFFF;
-    min-height: 960px;
-    max-width: 2048px;
-    margin: auto;
-    width: 80%;
-    box-shadow: 0px 3px 3px rgba(66,66,66,0.3);
+    display: grid;
+    grid-auto-rows: minmax(0px, auto);
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr)
 }
-h3 {
-    color: #003058;
+header {
+    grid-row: 1 / 2;
+    grid-column: 2 / 8; /* or 2 / -2 */
 }
-main {
-    padding-left: 2rem;
-    padding-right: 2rem;
+header h1 {
+    margin: 0;
+}
+nav {
+    grid-row: 2 / 3;
+    grid-column: 2 / 8; /* or 2 / -2 */
+}
 
-}
-#homehero {
-    background-image: url(../utahtechimages/homehero.jpg);
-    background-size: cover;
-    background-repeat: cover;
-    background-position: center;
-    height: 300px;
-}
-#facultyhero {
-    background-image: url(../utahtechimages/facultyhero.jpg);
-    background-size: cover;
-    background-repeat: cover;
-    background-position: center;
-    height: 300px;
-}
-#studenthero {
-    background-image: url(../utahtechimages/studenthero.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 300px;
-}
-nav a {
-    text-decoration: none;
-}
