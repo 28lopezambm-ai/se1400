@@ -20,4 +20,28 @@ nav {
     grid-row: 2 / 3;
     grid-column: 2 / 8; /* or 2 / -2 */
 }
+#homehero {grid-row: 3/4;
+grid-column: 2/8; /*or 2 / -2 */
+}
+#studenthero {grid-row: 3/4;
+grid-column: 2/8; /*or 2 / -2 */
+}
+#facultyhero {grid-row: 3/4;
+grid-column: 2/8; /*or 2 / -2 */
+}
+.main-selector {grid-row: 4 / 5;
+grid-column: 2/8;
+background-color:#ffffff
+}
+.footer {grid-row: 5/6;
+grid-column: 2/8 /*or 2 / -2 */;
+}
+header {text-decoration: none;
+color: #ffffff;}
+main img {
+    float: right;
+    padding-left: 2rem;
+}
+
+
 
