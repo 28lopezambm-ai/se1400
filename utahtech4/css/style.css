@@ -42,6 +42,26 @@ main img {
     float: right;
     padding-left: 2rem;
 }
+nav {
+    background-color:#424242 ;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+}
+nav ul li{
+    width: 100;
+}
+nav a {
+    display: block;
+    padding: 1rem 0rem;
+    text-align: center;
+    color: #ffffff;
+}
+nav a:hover {
+    background-color: #ba1c21;
+}
+
 
 
 
