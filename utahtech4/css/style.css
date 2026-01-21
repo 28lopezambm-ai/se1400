@@ -1,15 +1,33 @@
-body{
-    background-color: #FFFFFF;
-    color: #666666;
-    font-family: Arial, sans-serif;
-    background-attachment: fixed;
-    background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
+* {
+    box-sizing: border-box;
 }
+
+body {
+    background-color: #ffffff;
+    color: #666666
+    font-family: arial, sans-serif;
+    background-attachment: fixed;
+    background-image: linear-gradient (to bottom, #ffffff, #eeeeee);
+    margin: 0px;
+}
+
 header {
     background-color: #003058;
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    grid-row:1 / 2;
+    grid-column: 1 / -2;
 }
+
+nav {
+    background-color: #424242;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    grid-row: 2 / 3;
+    grid-column: 2 / -2;
+}
+
 header h1 {
     line-height: 140%;
     padding: .5rem;
@@ -17,135 +35,98 @@ header h1 {
     background-position: right;
     background-repeat: no-repeat;
     background-origin: content-box;
-    margin-bottom: 0;
+    margin: 0%;
 }
-nav {
-    background-color: #f3f3f3;
+
+h2 {
+    color: #424242;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+dt{
     font-weight: bold;
-    padding: .5rem;
-    padding-left: 1rem;
-    font-style: bold;
+    color: #003058;
 }
-h2 {  
-     color: #424242;
-    font-family: 'Times New Roman', Times, serif;
-}
-dt {
-    font-weight: bold;
-    color:#BA1C21;
-}
+
 .ut {
-    color: #BA1C21;
     font-weight: bold;
+    color: #ba1c21;
 }
+
 footer {
-    font-size: .70rem;
+    font-size: .7rem;
+    text-align: center;
     font-style: italic;
+    padding: 1rem;
+    grid-row: 5 / 6;
+    grid-column: 2 / -2;
 }
+
 #wrapper {
-    background-color: #FFFFFF;
-    min-height: 960px;
-    max-width: 2048px;
-    margin: auto;
-    width: 80%;
-    box-shadow: 0px 3px 3px rgba(66,66,66,0.3);
+    display: grid;
+    grid-auto-rows: minmax(0 , auto);
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px));
 }
+
 h3 {
     color: #003058;
 }
+
 main {
     padding-left: 2rem;
     padding-right: 2rem;
+    grid-row: 4 / 5;
+    grid-column: 2 / -2;
+}
 
-}
-#homehero {
-    background-image: url(../utahtechimages/homehero.jpg);
-    background-size: cover;
-    background-repeat: cover;
-    background-position: center;
-    height: 300px;
-}
-#facultyhero {
-    background-image: url(../utahtechimages/facultyhero.jpg);
-    background-size: cover;
-    background-repeat: cover;
-    background-position: center;
-    height: 300px;
-}
-#studenthero {
-    background-image: url(../utahtechimages/studenthero.jpg);
+#homeroom {
+    background-image: url('.../utahtechimages/homeroomhero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 300px;
+    grid-row: 3 / 4;
+    grid-column: 2 / -2;
 }
-nav a {
+
+#falcultyhero {
+    background-image: url('../utahtechimages/facultyhero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    grid-row: 3 / 4;
+    grid-column: 2 / -2;
+}
+    #studenthero {
+    background-image: url('.../utahtechimages/studenthero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    grid-row: 3 / 4;
+    grid-column: 2 / -2;
+    }
+
+nav a:hover {
     text-decoration: none;
+    color: #ffffff;
+    padding: 1rem 0rem;
+    display: block;
+    text-align: center;
 }
-* {
-    box-sizing: border-box;
+nav ul li {
+    width: 100%;
 }
-body {
-    margin: 0px;
-}
-#wrapper {
-    display: grid;
-    grid-auto-rows: minmax(0px, auto);
-    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr)
-}
-header {
-    grid-row: 1 / 2;
-    grid-column: 2 / 8; /* or 2 / -2 */
-}
-header h1 {
-    margin: 0;
-}
-nav {
-    grid-row: 2 / 3;
-    grid-column: 2 / 8; /* or 2 / -2 */
-}
-#homehero {grid-row: 3/4;
-grid-column: 2/8; /*or 2 / -2 */
-}
-#studenthero {grid-row: 3/4;
-grid-column: 2/8; /*or 2 / -2 */
-}
-#facultyhero {grid-row: 3/4;
-grid-column: 2/8; /*or 2 / -2 */
-}
-.main-selector {grid-row: 4 / 5;
-grid-column: 2/8;
-background-color:#ffffff
-}
-.footer {grid-row: 5/6;
-grid-column: 2/8 /*or 2 / -2 */;
-}
-header a {text-decoration: none;
-color: #ffffff;}
+
 main img {
     float: right;
     padding-left: 2rem;
 }
-nav {
-    background-color:#424242 ;
-    padding: 0;
-    margin: 0;
-    position: sticky;
-    top: 0;
-}
-nav ul li{
-    width: 100;
-}
-nav a {
-    display: block;
-    padding: 1rem 0rem;
-    text-align: center;
+header a {
+    text-decoration: none;
     color: #ffffff;
 }
-nav a:hover {
-    background-color: #ba1c21;
-}
-main img {
-    float:right;
-    padding-left: rem;
-}
+
+
+
