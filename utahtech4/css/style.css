@@ -120,7 +120,7 @@ background-color:#ffffff
 .footer {grid-row: 5/6;
 grid-column: 2/8 /*or 2 / -2 */;
 }
-header {text-decoration: none;
+header a {text-decoration: none;
 color: #ffffff;}
 main img {
     float: right;
@@ -144,4 +144,8 @@ nav a {
 }
 nav a:hover {
     background-color: #ba1c21;
+}
+main img {
+    float:right;
+    padding-left: rem;
 }
