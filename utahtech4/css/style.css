@@ -7,7 +7,7 @@ body {
     color: #666666;
     font-family: arial, sans-serif;
     background-attachment: fixed;
-    background-image: linear-gradient (to bottom, #ffffff, #eeeeee);
+    background-image: linear-gradient(to bottom, #ffffff, #eeeeee);
     margin: 0px;
 }
 
@@ -17,6 +17,16 @@ header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     grid-row:1 / 2;
     grid-column: 1 / -2;
+}
+
+header h1 {
+    line-height: 140%;
+    padding: .5rem;
+    padding-left: 1rem;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    margin: 0%;
 }
 
 nav {
@@ -29,16 +39,6 @@ nav {
     padding: .5rem;
     padding-left: 1rem;
     font-style: bold;
-}
-
-header h1 {
-    line-height: 140%;
-    padding: .5rem;
-    padding-left: 1rem;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-origin: content-box;
-    margin: 0%;
 }
 
 h2 {
@@ -124,6 +124,7 @@ nav a:hover {
     display: block;
     text-align: center;
 }
+
 nav ul li {
     width: 100%;
 }
@@ -132,7 +133,11 @@ main img {
     float: right;
     padding-left: 2rem;
 }
+
 header a {
     text-decoration: none;
     color: #ffffff;
+}
+nav A{
+    
 }
