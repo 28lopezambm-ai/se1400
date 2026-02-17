@@ -1,34 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Grid Layout Example</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft SMP Wiki</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #2C2C2C;
+            font-family: monospace;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Minecraft dirt background pattern overlay */
+        .background-pattern {
+            position: fixed;
+            inset: 0;
+            opacity: 0.2;
+            background-image: 
+                repeating-linear-gradient(0deg, #1a1a1a 0px, #1a1a1a 4px, transparent 4px, transparent 8px),
+                repeating-linear-gradient(90deg, #1a1a1a 0px, #1a1a1a 4px, transparent 4px, transparent 8px);
+            z-index: -1;
+        }
+
+        /* Outer Container */
+        .page-wrapper {
+            position: relative;
+            background-color: #3C3C3C;
+            border: 8px solid black;
+            width: 100%;
+            max-width: 1200px;
+            min-height: 800px;
+            margin: 20px;
+            box-shadow: 0 0 0 4px #8B8B8B, 0 0 0 8px #000, 20px 20px 40px rgba(0,0,0,0.8);
+            image-rendering: pixelated;
+        }
+
+        /* GRID CONTAINER (The Assignment Requirement) */
+        .grid-container {
+            display: grid;
+            /* Column definition: 1fr margins, 6 fixed columns of 175px, 1fr margins */
+            grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+            /* Rows are defined by content */
+            gap: 1rem;
+            padding: 1rem;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Header - Semantic Tag */
+        header {
+            grid-column: 2 / 8; /* Spans middle 6 columns */
+            border-bottom: 4px solid black;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            /* Visualization Overlay */
+            background-color: rgba(255, 255, 0, 0.3);
+            border: 1px solid rgba(255, 255, 0, 0.5);
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin: 0 0 0.25rem 0;
+            font-size: 2.25rem;
+            text-shadow: 4px 4px 0px #3F3F3F;
+        }
+
+        .subtitle {
+            color: #AAAAAA;
+            text-align: center;
+            font-size: 0.875rem;
+            text-shadow: 2px 2px 0px #000000;
+        }
+
+        /* Sidebar - Semantic Tag */
+        aside {
+            grid-column: 2 / 4; /* Spans columns 2 and 3 */
+            border: 4px solid black;
+            background: linear-gradient(to bottom, #7B7B7B, #5A5A5A);
+            
+            /* Visualization Overlay */
+            background-color: rgba(128, 0, 128, 0.3);
+            border: 1px solid rgba(128, 0, 128, 0.5);
+        }
+
+        /* Main Content - Semantic Tag */
+        main {
+            grid-column: 4 / 8; /* Spans columns 4, 5, 6, 7 */
+            border: 4px solid black;
+            background-color: #4A4A4A;
+            padding: 1rem;
+            color: white;
+            
+            /* Visualization Overlay */
+            background-color: rgba(0, 0, 255, 0.3);
+            border: 1px solid rgba(0, 0, 255, 0.5);
+        }
+
+        /* Footer - Semantic Tag */
+        footer {
+            grid-column: 2 / 8; /* Spans middle 6 columns */
+            border-top: 4px solid black;
+            padding: 0.75rem;
+            text-align: center;
+            
+            /* Visualization Overlay */
+            background-color: rgba(128, 128, 128, 0.3);
+            border: 1px solid rgba(128, 128, 128, 0.5);
+        }
+
+        .footer-text {
+            color: #AAAAAA;
+            font-size: 0.875rem;
+            text-shadow: 2px 2px 0px #000000;
+            margin: 0;
+        }
+
+        .footer-sub {
+            color: #888888;
+            font-size: 0.75rem;
+            margin: 4px 0 0 0;
+        }
+
+    </style>
 </head>
 <body>
 
-  <div class="page-wrapper">
-    
-    <header class="header">
-      Header
-    </header>
+    <div class="background-pattern"></div>
 
-    <nav class="nav">
-      Navigation
-    </nav>
+    <div class="page-wrapper">
+        <!-- Inner Grid Wrapper (The Grid) -->
+        <div class="grid-container">
+            
+            <header>
+                <h1>🟫 MINECRAFT SMP WIKI 🟫</h1>
+                <p class="subtitle">Complete Archive (2020-2025) | Fan Encyclopedia</p>
+            </header>
 
-    <main class="main">
-      Main content changes per page
-    </main>
+            <aside>
+                <!-- Navigation Content Placeholder -->
+                <div style="padding: 1rem; color: white;">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li>Dream SMP</li>
+                        <li>Hermitcraft</li>
+                        <li>SMPLive</li>
+                        <li>Empires SMP</li>
+                    </ul>
+                </div>
+            </aside>
 
-    <aside class="sidebar">
-      Sidebar
-    </aside>
+            <main>
+                <!-- Main Content Placeholder -->
+                <h2>Welcome to the Archive</h2>
+                <p>Select an SMP from the sidebar to view details.</p>
+                <p>This grid layout uses <code>minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr)</code>.</p>
+            </main>
 
-    <footer class="footer">
-      Footer
-    </footer>
+            <footer>
+                <p class="footer-text">⛏️ A fan-made tribute to Minecraft SMPs ⛏️</p>
+                <p class="footer-sub">Not affiliated with Mojang Studios | Community Created</p>
+            </footer>
+
+        </div>
     </div>
-</body>
-</htm>
 
+</body>
+</html>
