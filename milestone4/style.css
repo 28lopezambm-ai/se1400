@@ -1,7 +1,6 @@
 
 .background-pattern {
     position: fixed;
-    inset: 0;
     opacity: 0.2;
     background-image: 
         repeating-linear-gradient(0deg, #1a1a1a 0px, #1a1a1a 4px, transparent 4px, transparent 8px),
