@@ -148,7 +148,9 @@ nav A{
 }
 #greybar {
     background-color: #424242
-    grid-row: 2/3;
-    grid-column: 1 / 9;
+    grid-row: 2 / 3;
+    grid-column: 1 / 10;
 }
-@media screen (max-width:1100px)
+#homehero { background-color: #ffaa00; }
+#studenthero { background-color: #00ffaa; }
+#facultyhero { background-color: #aa00ff; }

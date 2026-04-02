@@ -36,7 +36,7 @@ dt {
     color:#BA1C21;
 }
 .ut {
-    color: #BA1C21;
+   color : #BA1C21;
     font-weight: bold;
 }
 footer {
@@ -84,8 +84,8 @@ nav a {
     text-decoration: none;
     text-color: #FFFFFF;
     padding: 1rem 0rem;
-    display:block
-    text-align: center
-    nav align-self:hover
+    display:block;
+    text-align: center;
+    nav a: hover;
     background-color: #BA1C21;
-} 
+}
